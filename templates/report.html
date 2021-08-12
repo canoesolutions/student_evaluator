@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+
+<!-- Title Started -->
+
+{% block title %} Report {% endblock title %}
+
+<!-- Title Ended -->
+
+
+<!-- Body Started -->
+
+{% block body %}
+
+<section class="text-gray-400 bg-gray-900 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Nagput Institute Of Technology</h1>
+      <h3 class="sm:text-xl text-xl title-font mb-4 text-white">Department Of Training And Placement</h3>
+      <h3 class="sm:text-xl text-xl font-medium title-font mb-4 text-white">TEST REPORT</h3>
+    </div>
+
+    <!-- Report Table Start -->
+
+    <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-auto lg:mx-24">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th scope="col"
+                      class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
+                      Name Of Student
+                    </th>
+                    <td scope="col"
+                      class="text-sm font-medium text-gray-900">
+                      Nishant Shrivastava
+                    </td>
+                    
+                  </tr>
+                </thead>
+                <tbody class="bg-gray-50">
+                  <tr>
+                    <th scope="col"
+                      class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
+                      Branch
+                    </th>
+                    <td scope="col"
+                      class="text-sm font-medium text-gray-900">
+                      MCA
+                    </td>
+                    
+                  </tr>
+
+                </tbody>
+                <tbody class="bg-gray-50">
+                    <tr>
+                      <th scope="col"
+                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
+                        Year Of Passing
+                      </th>
+                      <td scope="col"
+                        class="text-sm font-medium text-gray-900">
+                        2021
+                      </td>
+                      
+                    </tr>
+  
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Report Table Ended -->
+
+{% endblock body %}
+
+<!-- Body Ended -->
