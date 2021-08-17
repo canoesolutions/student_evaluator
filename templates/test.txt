@@ -1,0 +1,21 @@
+Gati Krishna Meher9:57 AM
+User
+- UserID (PK) Not NULL
+- email (UNIQUE) NULL - Only 1 null is acceptable
+- date_of_birth
+- username
+- role (ADMIN, STUDENT)
+- 
+
+
+
+IQ
+- IqID (PK)
+- UserID (FK)
+- test Date
+- Clear_Thinking
+- Observational_Ability
+
+
+SELECT USERID, EmAIL, CLEAR_THINKING FROM User user, IQ iq where user.userID = IQ.userid AND email = 'gatimeher@gmail.com' AND test_date = '2021-08-19'
+Syncup - Python Project

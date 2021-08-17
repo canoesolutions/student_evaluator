@@ -1,81 +1,603 @@
 {% extends 'base.html' %}
 
-
 <!-- Title Started -->
 
 {% block title %} Report {% endblock title %}
 
 <!-- Title Ended -->
 
-
 <!-- Body Started -->
 
 {% block body %}
 
-<section class="text-gray-400 bg-gray-900 body-font relative">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-12">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Nagput Institute Of Technology</h1>
-      <h3 class="sm:text-xl text-xl title-font mb-4 text-white">Department Of Training And Placement</h3>
-      <h3 class="sm:text-xl text-xl font-medium title-font mb-4 text-white">TEST REPORT</h3>
+<section class="text-gray-400 bg-indigo-200 body-font relative">
+    <div class="container px-5 py-5 mx-auto">
+        <div class="flex flex-col text-center w-full mb-5">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-700">
+                Nagput Institute Of Technology
+            </h1>
+            <h3 class="sm:text-xl text-xl title-font mb-2 text-gray-500">
+                Department Of Training And Placement
+            </h3>
+            <h3 class="sm:text-xl text-xl font-medium title-font mb-2 text-gray-800">
+                TEST REPORT
+            </h3>
+        </div>
     </div>
 
     <!-- Report Table Start -->
 
     <div class="flex flex-col">
-        <div class="-my-2 overflow-x-auto sm:-mx-auto lg:mx-24">
-          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
-            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-              <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
-                  <tr>
-                    <th scope="col"
-                      class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
-                      Name Of Student
-                    </th>
-                    <td scope="col"
-                      class="text-sm font-medium text-gray-900">
-                      Nishant Shrivastava
-                    </td>
-                    
-                  </tr>
-                </thead>
-                <tbody class="bg-gray-50">
-                  <tr>
-                    <th scope="col"
-                      class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
-                      Branch
-                    </th>
-                    <td scope="col"
-                      class="text-sm font-medium text-gray-900">
-                      MCA
-                    </td>
-                    
-                  </tr>
+        <div class="-my-2 overflow-x-auto sm:-mx-auto mb-12 lg:mx-24">
+            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-white">
+                            <tr>
+                                <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Name Of Student
+                                </th>
+                                <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                                    Nishant Shrivastava
+                                </td>
+                                <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Email ID
+                                </th>
+                                <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                                    nish@gmail.com
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Branch
+                                </th>
+                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                    MCA
+                                </td>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Mobile Number
+                                </th>
+                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                    9876543210
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody class="bg-white">
+                            <tr>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Year Of Passing
+                                </th>
+                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                    2021
+                                </td>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Gender
+                                </th>
+                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                    Male
+                                </td>
+                            </tr>
+                        </tbody>
 
-                </tbody>
-                <tbody class="bg-gray-50">
-                    <tr>
-                      <th scope="col"
-                        class="px-6 py-3 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        Year Of Passing
-                      </th>
-                      <td scope="col"
-                        class="text-sm font-medium text-gray-900">
-                        2021
-                      </td>
-                      
-                    </tr>
-  
-                  </tbody>
-              </table>
+                        <tbody class="bg-white">
+                            <tr>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio1" name="emotional_intelligence" value="eq" checked />
+                                      <label for="html">Emotional Intelligence</label>
+                                </th>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio2" name="emotional_intelligence" value="eq" />
+                                      <label for="html">Intellectual Capacity</label>
+                                </th>
+
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio3" name="emotional_intelligence" value="eq" />
+                                      <label for="html">Personality Test</label>
+                                </th>
+
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio4" name="emotional_intelligence" value="eq" />
+                                      <label for="html">Meta-Cognitive Test</label>
+                                </th>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                                <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    <img src="static\images\bar.png" />
+                                </td>
+                                <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                            </tr>
+                        </tbody>
+
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" colspan="2" class="
+                          
+                          py-3
+                          text-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          text-base
+                          uppercase
+                          tracking-wider
+                        ">Emotional Quotient</td>
+
+                                <td scope="col" colspan="2" class="
+                          px-14
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-xl
+                          text-gray-900
+                          uppercase
+                          tracking-wider
+                        ">99.22</td>
+
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                                <td scope="col" class="
+                          px-6
+                          py-3
+                          content-center
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    <button class="
+                            inline-flex
+                            items-center
+                            bg-gray-500
+                            border-0
+                            py-1
+                            px-3
+                            focus:outline-none
+                            hover:bg-indigo-900
+                            text-gray-100
+                            rounded
+                            text-base
+                            ml-20
+                            mt-4
+                            md:mt-0
+                          ">
+                                        Download as PDF
+                                    </button>
+                                </td>
+                                <td scope="col" class="
+                          px-6
+                          py-3
+                          content-center
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                    <button class="
+                            inline-flex
+                            items-center
+                            bg-gray-500
+                            border-0
+                            py-1
+                            px-3
+                            focus:outline-none
+                            hover:bg-indigo-900
+                            text-gray-100
+                            rounded
+                            text-base
+                            mt-4
+                            md:mt-0
+                          ">
+                                        Send Report as Email
+                                    </button>
+                                </td>
+
+                                <td scope="col" class="
+                          px-6
+                          py-3
+                          content-center
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Self Awareness
+                                </td>
+                                <td scope="col" colspan="3" class="pr-3 pt-5 pb-3 justify-right text-sm text-gray-900">
+                                    Self awareness is the recognition of that awareness.
+                                    Self-awareness is how an individual consciously knows and
+                                    understands him/her own character, feelings, motives and
+                                    desires. If you are highly self-aware, you can objectively
+                                    evaluate yourself, manage your emotions, align your behaviour
+                                    with values, and understand correctly how others perceive(to
+                                    notice or realize something) you. <br />
+                                    <b>Skills Involved - Emotional Awareness, Accurate Self
+                                        Assessment and self confidence.</b>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Self Management
+                                </td>
+                                <td scope="col" colspan="3" class="pr-3 py-3 justify-right text-sm text-gray-900">
+                                    Self-management is the ability to prioritize goals, decide
+                                    what must be done, and be accountable to complete the
+                                    necessary actions. Comprehensive self-management involves four
+                                    realms(an area of activity): physical, mental, social and
+                                    spiritual.<br />
+                                    <b>
+                                        Skills Involved - Trust, impulse control, conscientiousness,
+                                        adaptability, achievement motivation, initiative and
+                                        Optimism.</b>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Social Awareness
+                                </td>
+                                <td scope="col" colspan="3" class="
+                          pr-3
+                          py-3
+                          
+                          text-sm
+                          
+                          text-gray-900
+                        ">
+                                    - Empathy : Understanding the other person's emotions, need
+                                    and concerns.<br />
+                                    - Organisational Awareness : The ability to understandthe
+                                    politics in the organization and how this can affect the
+                                    people working in them.<br />
+                                    - Service : the ability to understand and meet the needs of
+                                    clients and customers.<br />
+                                    <b>Skills Involved - Empathy, Service orientation and
+                                        Political awareness</b>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Social Skills
+                                </td>
+                                <td scope="col" colspan="3" class="
+                          pr-3
+                          py-3
+                          
+                          text-sm
+                          
+                          text-gray-900
+                        ">
+                                    Social skills are the skills we use to communicate and
+                                    interact with each other, both verbally and non-verbally,
+                                    through gestures, body language and our personal appearance.
+                                    Social skills are important because they are the foundation
+                                    for having positive relationships with others with your
+                                    partners, friends, and for your career.<br />
+                                    <b>
+                                        Skills Involved - Developing Others, Influence, Conflict
+                                        Management, Leadership, Change Catalyst, Building Bonds and
+                                        Team Building & Collaboration.</b>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+                                <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                                    Emotional Intelligence
+                                </td>
+                                <td scope="col" colspan="3" class="
+                          pr-3
+                          py-3
+                         
+                          text-sm
+                         
+                          text-gray-900
+                        ">
+                                    This is a combination of the above parameters.
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+
+                                <td scope="col" colspan="4" class="
+                          px-6
+                          pt-5
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                                    <u>Important message to the student</u>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+
+                                <td scope="col" colspan="4" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          text-gray-900
+                          font-medium
+                          tracking-wider
+                        ">
+                                    All the students needs to focus more on a particular competency rating which is
+                                    below the Average.<br>
+                                    Proper actions must be taken on every competency for further improvement.
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="bg-white">
+                            <tr>
+
+                                <td scope="col" class="
+                          px-6
+                          py-5
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          text-base
+                          tracking-wider
+                        ">
+                                    Test Conducted On :
+                                </td>
+
+
+                                <td scope="col" class="
+                          px-6
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-900
+                          text-base
+                          tracking-wider
+                        ">
+                                    12-08-2021
+                                </td>
+
+                                <td scope="col" class="
+                          px-6
+                          py-5
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          text-base
+                          tracking-wider
+                        ">
+
+                                </td>
+
+                                <td scope="col" class="
+                        w-1/4
+                          px-6
+                          pt-14
+                          pb-5
+                          text-center text-sm
+                          font-medium
+                          text-sm
+                          text-gray-900
+                          tracking-wider
+                        ">
+                                    Anil Tijare<br>
+                                    Dean Training & Placement<br>
+                                    Shri Sai Shikshan Sanstha's<br>
+                                    NIT Group of Institutions
+                                </td>
+
+
+                            </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</section>
 
-      <!-- Report Table Ended -->
+
+
+
+
+
+
+<!-- Report Table Ended -->
 
 {% endblock body %}
 
 <!-- Body Ended -->
+</section>
