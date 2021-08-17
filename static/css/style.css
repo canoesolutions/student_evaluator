@@ -33,6 +33,8 @@
 
 
 
-  /* Html Chart */
-
+  /* Dropdown Search Page */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
