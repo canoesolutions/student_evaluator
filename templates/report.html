@@ -10,51 +10,79 @@
 
 {% block body %}
 
-<section class="text-gray-400 bg-gray-500 body-font relative">
+<section class="text-gray-400 bg-gray-300 body-font relative">
     <div class="container px-5 py-5 mx-auto">
     
-             <button class="
-                            inline-flex
-                            items-center
-                            bg-indigo-700
-                            border-0
-                            py-1
-                            px-3
-                            focus:outline-none
-                            hover:bg-indigo-800
-                            text-gray-100
-                            rounded
-                            text-base
-                            ml-96
-                            mt-4
-                            md:mt-0
-                          ">
-                                        Download as PDF
-                                    </button>
-            <button class="
-                            inline-flex
-                            items-center
-                            bg-indigo-700
-                            border-0
-                            py-1
-                            px-3
-                            focus:outline-none
-                            hover:bg-indigo-800
-                            text-gray-100
-                            rounded
-                            text-base
-                            ml-36
-                            mt-4
-                            md:mt-0
-                          ">
-                                        Send Report as Email
-                                    </button>
     </div>
 
-    <!-- Report Table Start -->
+    <!-- Option Table Start -->
+    <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-auto mb-2 lg:mx-24">
+            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                    <table class="min-w-full divide-y divide-gray-100">
+
+                        <thead class="bg-gray-400">
+                            <tr>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio1" name="emotional_intelligence" value="eq" checked />
+                                      <label for="html">Emotional Intelligence</label>
+                                </th>
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio2" name="emotional_intelligence" value="eq" />
+                                      <label for="html">Intellectual Capacity</label>
+                                </th>
+
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio3" name="emotional_intelligence" value="eq" />
+                                      <label for="html">Personality Test</label>
+                                </th>
+
+                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-white
+                          uppercase
+                        ">
+                                    <input type="radio" id="radio4" name="emotional_intelligence" value="eq" />
+                                      <label for="html">Meta-Cognitive Test</label>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Table Started -->
 
     <div class="flex flex-col">
-        <div class="-my-2 overflow-x-auto sm:-mx-auto mb-12 lg:mx-24">
+        <div class="-my-2 overflow-x-auto sm:-mx-auto mb-5 lg:mx-24">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                     <table class="min-w-full divide-y divide-gray-100">
@@ -235,56 +263,7 @@
                             </tr>
                         </tbody>
 
-                        <tbody class="bg-white">
-                            <tr>
-                                <th scope="col" class="
-                          px-6
-                          py-3
-                          text-center text-sm
-                          font-medium
-                          text-gray-900
-                          uppercase
-                        ">
-                                    <input type="radio" id="radio1" name="emotional_intelligence" value="eq" checked />
-                                      <label for="html">Emotional Intelligence</label>
-                                </th>
-                                <th scope="col" class="
-                          px-6
-                          py-3
-                          text-center text-sm
-                          font-medium
-                          text-gray-900
-                          uppercase
-                        ">
-                                    <input type="radio" id="radio2" name="emotional_intelligence" value="eq" />
-                                      <label for="html">Intellectual Capacity</label>
-                                </th>
-
-                                <th scope="col" class="
-                          px-6
-                          py-3
-                          text-center text-sm
-                          font-medium
-                          text-gray-900
-                          uppercase
-                        ">
-                                    <input type="radio" id="radio3" name="emotional_intelligence" value="eq" />
-                                      <label for="html">Personality Test</label>
-                                </th>
-
-                                <th scope="col" class="
-                          px-6
-                          py-3
-                          text-center text-sm
-                          font-medium
-                          text-gray-900
-                          uppercase
-                        ">
-                                    <input type="radio" id="radio4" name="emotional_intelligence" value="eq" />
-                                      <label for="html">Meta-Cognitive Test</label>
-                                </th>
-                            </tr>
-                        </tbody>
+                        
 
                         <tbody class="bg-white">
                             <tr>
@@ -625,6 +604,46 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container px-5 pb-10  mx-auto">
+    
+             <button class="
+                            inline-flex
+                            items-center
+                            bg-gray-600
+                            border-0
+                            py-1
+                            px-3
+                            focus:outline-none
+                            hover:bg-gray-700
+                            text-gray-100
+                            rounded-full
+                            text-base
+                            ml-96
+                            mt-4
+                            md:mt-0
+                          ">
+                                        Download as PDF
+                                    </button>
+            <button class="
+                            inline-flex
+                            items-center
+                            bg-gray-600
+                            border-0
+                            py-1
+                            px-3
+                            focus:outline-none
+                            hover:bg-gray-700
+                            text-gray-100
+                            rounded-full
+                            text-base
+                            ml-36
+                            mt-4
+                            md:mt-0
+                          ">
+                                        Send Report as Email
+                                    </button>
     </div>
 </section>
 

@@ -2,8 +2,9 @@ Gati Krishna Meher9:57 AM
 User
 - UserID (PK) Not NULL
 - email (UNIQUE) NULL - Only 1 null is acceptable
+- mobile num
 - date_of_birth
-- username
+- name
 - role (ADMIN, STUDENT)
 - 
 
@@ -19,3 +20,10 @@ IQ
 
 SELECT USERID, EmAIL, CLEAR_THINKING FROM User user, IQ iq where user.userID = IQ.userid AND email = 'gatimeher@gmail.com' AND test_date = '2021-08-19'
 Syncup - Python Project
+
+
+
+<form action="" >
+                              <input class="inline-flex text-center ml-20 bg-gray-200 border-0 py-1 px-5 focus:outline-none hover:bg-gray-300 text-gray-900 rounded-full text-base mt-4 md:mt-0" type="file"  id="myFile" name="filename">
+                              <input class="inline-flex items-center bg-gray-700 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-700 text-gray-100 rounded-full ml-2 text-base mt-4 md:mt-0" type="submit">
+                          </form>

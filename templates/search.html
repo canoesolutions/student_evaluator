@@ -14,7 +14,7 @@
 {% block body %}
 
 <!-- Tabel Containing Data Started -->
-<section class="text-gray-400 bg-gray-500 body-font relative">
+<section class="text-gray-400 bg-gray-300 body-font relative">
   <div class="container-fluid px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
 
@@ -22,7 +22,7 @@
 
       <div class="pt-2 pb-5 relative mx-auto text-gray-700">
         
-          <select class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none" name="search" id="search">
+          <select class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:outline-none" name="search" id="search">
             <option value="name_of_student">Name Of Student</option>
             <option value="name_of_college">Name Of College</option>
             <option value="branch">Branch</option>
@@ -30,18 +30,18 @@
             <option value="age">Age</option>
             <option value="test_date">Test Conducted On</option>
           </select>
-        <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 ml-4 rounded-lg text-sm focus:outline-none"
+        <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 ml-4 rounded-full text-sm focus:outline-none"
           type="search" name="search" placeholder="">
         <button
-          class="inline-flex items-center ml-4 bg-indigo-700 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-indigo-800 rounded text-base mt-4 md:mt-0">SEARCH
+          class="inline-flex items-center ml-4 bg-gray-600 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0">SEARCH
 
         </button>
         <button
-          class="ml-72 inline-flex items-center bg-indigo-700 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-indigo-800 rounded text-base mt-4 md:mt-0">Download PDF
+          class="ml-72 inline-flex items-center bg-gray-600 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0">Download PDF
 
         </button>
         <button
-          class="ml-4 inline-flex items-center bg-indigo-700 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-indigo-800 rounded text-base mt-4 md:mt-0">Send as Email
+          class="ml-4 inline-flex items-center bg-gray-600 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0">Send as Email
 
         </button>
       </div>
@@ -56,39 +56,39 @@
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
               <table class="min-w-full divide-y divide-gray-200" id="dataTable">
-                <thead class="bg-gray-300">
+                <thead class="bg-gray-400">
                   <tr>
 
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       <input type="checkbox" id="checkAll"  >
                     </th>
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       Name Of Student
                     </th>
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       Name Of College
                     </th>
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       Branch/Stream
                     </th>
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       Year
                     </th>
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       Age
                     </th>
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       Test Conducted On
                     </th>
                     <th scope="col"
-                      class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase tracking-wider">
+                      class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
                       View Report
                     </th>
                   </tr>
