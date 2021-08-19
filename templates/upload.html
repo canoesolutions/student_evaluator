@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 
-
 <!-- Title Started -->
 
 {% block title %} Upload File {% endblock title %}
 
 <!-- Title Ended -->
-
 
 <!-- Body Started -->
 
@@ -14,70 +12,224 @@
 
 <!-- Upload File Started -->
 
-
 <section class="text-gray-400 bg-gray-300 body-font relative">
   <div class="container-fluid px-5 py-10 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
-
-
-
+      
+      
+      
 
       <!-- Data Table Started -->
 
       <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-auto lg:-mx-auto">
-          <div class="py-2 align-middle inline-block max-w-full sm:px-6 lg:px-8">
-            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <div
+            class="py-2 align-middle inline-block max-w-full sm:px-6 lg:px-8"
+          >
+            <div
+              class="
+                shadow
+                overflow-hidden
+                border-b border-gray-200
+                sm:rounded-lg
+              "
+            >
               <table class="max-w-full divide-y divide-gray-400">
                 <thead class="bg-gray-400 w-1/2">
                   <tr>
-                    <th scope="col"
-                      class="px-6 py-3 text-center text-lg font-medium text-gray-900 uppercase tracking-wider">
+                    <th
+                      scope="col"
+                      class="
+                        px-6
+                        py-3
+                        text-center text-lg
+                        font-medium
+                        text-gray-900
+                        uppercase
+                        tracking-wider
+                      "
+                    >
                       Emotional Intelligence
                     </th>
-                    <th scope="col"
-                    class="px-6 py-3 text-center text-lg font-medium text-gray-900 uppercase tracking-wider">
+                    <th
+                      scope="col"
+                      class="
+                        px-6
+                        py-3
+                        text-center text-lg
+                        font-medium
+                        text-gray-900
+                        uppercase
+                        tracking-wider
+                      "
+                    >
                       Intellectual Capacity
                     </th>
                   </tr>
                 </thead>
-                <tbody class=" bg-gray-400 divide-y divide-gray-200">
+                <tbody class="bg-gray-400 divide-y divide-gray-200">
                   <tr>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex w-80% h-32 items-center justify-center bg-gray-200 sm:rounded-full">
-                        <form action="" >
-                          <input class="inline-flex text-center mx-4 bg-gray-200 border-0 py-1 px-5 focus:outline-none hover:bg-gray-300 text-gray-900 rounded-full text-base mt-5 " type="file"  id="myFile" name="filename"><br>
-                          <input class="inline-flex items-center bg-gray-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full ml-2 text-base mt-4 " type="submit">
-                      </form>
-                    </div>
-                    <br>
-                        <button
-                            class="inline-flex items-center bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full text-base mt-4 md:mt-0">Download Template
-
-                        </button>
+                      <div
+                        class="
+                          flex
+                          w-80%
+                          h-32
+                          items-center
+                          justify-center
+                          bg-gray-200
+                          sm:rounded-xl
+                        "
+                      >
+                      {% if messages %} 
+      {% for message in messages %}
+        <div>
+        <!--                | means OR operator-->
+            <strong>{{message|safe}}</strong>
+        </div>
+      {% endfor %}
+      {% else %} 
+      {{order}}
+                        <form method="GET" action="upload">
+                          <input
+                            class="
+                              inline-flex
+                              text-center
+                              mx-4
+                              bg-gray-200
+                              border-0
+                              py-1
+                              px-5
+                              focus:outline-none
+                              hover:bg-gray-300
+                              text-gray-900
+                              rounded-full
+                              text-base
+                              mt-5
+                            "
+                            type="file"
+                            id="file"
+                            name="file"
+                          /><br />
+                          <input
+                            class="
+                              inline-flex
+                              items-center
+                              bg-gray-600
+                              border-0
+                              py-1
+                              px-3
+                              focus:outline-none
+                              hover:bg-gray-700
+                              text-gray-100
+                              rounded-full
+                              ml-2
+                              text-base
+                              mt-4
+                            "
+                            type="submit"
+                          />
+                        </form>
+                        {% endif %}
+                      </div>
+                      <br />
+                      <button
+                        class="
+                          inline-flex
+                          items-center
+                          bg-gray-500
+                          border-0
+                          py-1
+                          px-3
+                          focus:outline-none
+                          hover:bg-gray-700
+                          text-gray-100
+                          rounded-full
+                          text-base
+                          mt-4
+                          md:mt-0
+                        "
+                      >
+                        Download Template
+                      </button>
                     </td>
 
-                    
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex w-80% h-32 items-center justify-center bg-gray-200 sm:rounded-full">
-                        <form action="" >
-                          <input class="inline-flex text-center mx-4 bg-gray-200 border-0 py-1 px-5 focus:outline-none hover:bg-gray-300 text-gray-900 rounded-full text-base mt-5" type="file"  id="myFile" name="filename"><br>
-                          <input class="inline-flex items-center bg-gray-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full ml-2 text-base mt-4" type="submit">
-                      </form>
-                    </div>
-                      <br>
-                        <button
-                            class="inline-flex items-center bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full text-base mt-4 md:mt-0">Download Template
-
-                        </button>
+                      <div
+                        class="
+                          flex
+                          w-80%
+                          h-32
+                          items-center
+                          justify-center
+                          bg-gray-200
+                          sm:rounded-xl
+                        "
+                      >
+                        <form method="GET" action="">
+                          <input
+                            class="
+                              inline-flex
+                              text-center
+                              mx-4
+                              bg-gray-200
+                              border-0
+                              py-1
+                              px-5
+                              focus:outline-none
+                              hover:bg-gray-300
+                              text-gray-900
+                              rounded-full
+                              text-base
+                              mt-5
+                            "
+                            type="file"
+                            id="myFile"
+                            name="filename"
+                          /><br />
+                          <input
+                            class="
+                              inline-flex
+                              items-center
+                              bg-gray-600
+                              border-0
+                              py-1
+                              px-3
+                              focus:outline-none
+                              hover:bg-gray-700
+                              text-gray-100
+                              rounded-full
+                              ml-2
+                              text-base
+                              mt-4
+                            "
+                            type="submit"
+                          />
+                        </form>
+                      </div>
+                      <br />
+                      <button
+                        class="
+                          inline-flex
+                          items-center
+                          bg-gray-500
+                          border-0
+                          py-1
+                          px-3
+                          focus:outline-none
+                          hover:bg-gray-700
+                          text-gray-100
+                          rounded-full
+                          text-base
+                          mt-4
+                          md:mt-0
+                        "
+                      >
+                        Download Template
+                      </button>
                     </td>
-
-                    
-                    
                   </tr>
-
                 </tbody>
-                
               </table>
             </div>
           </div>
@@ -85,74 +237,215 @@
       </div>
       <!-- Data Table Ended -->
 
-
       <!-- Data Table Started -->
 
       <div class="flex flex-col mt-4">
         <div class="-my-2 overflow-x-auto sm:-mx-auto lg:-mx-auto">
-          <div class="py-2 align-middle inline-block max-w-full sm:px-6 lg:px-8">
-            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <div
+            class="py-2 align-middle inline-block max-w-full sm:px-6 lg:px-8"
+          >
+            <div
+              class="
+                shadow
+                overflow-hidden
+                border-b border-gray-200
+                sm:rounded-lg
+              "
+            >
               <table class="max-w-full divide-y divide-gray-400">
                 <thead class="bg-gray-400 w-1/2">
                   <tr>
-                    <th scope="col"
-                      class="px-6 py-3 text-center text-lg font-medium text-gray-900 uppercase tracking-wider">
+                    <th
+                      scope="col"
+                      class="
+                        px-6
+                        py-3
+                        text-center text-lg
+                        font-medium
+                        text-gray-900
+                        uppercase
+                        tracking-wider
+                      "
+                    >
                       Personality Test
                     </th>
-                    <th scope="col"
-                    class="px-6 py-3 text-center text-lg font-medium text-gray-900 uppercase tracking-wider">
+                    <th
+                      scope="col"
+                      class="
+                        px-6
+                        py-3
+                        text-center text-lg
+                        font-medium
+                        text-gray-900
+                        uppercase
+                        tracking-wider
+                      "
+                    >
                       Meta-Cognitive Test
                     </th>
                   </tr>
                 </thead>
-                <tbody class=" bg-gray-400 divide-y divide-gray-200">
+                <tbody class="bg-gray-400 divide-y divide-gray-200">
                   <tr>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex w-80% h-32 items-center justify-center bg-gray-200 sm:rounded-full">
-                        <form action="" >
-                          <input class="inline-flex text-center mx-4 bg-gray-200 border-0 py-1 px-5 focus:outline-none hover:bg-gray-300 text-gray-900 rounded-full text-base mt-5" type="file"  id="myFile" name="filename"><br>
-                          <input class="inline-flex items-center bg-gray-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full ml-2 text-base mt-4 " type="submit">
-                      </form>
-                    </div>
-                    <br>
-                        <button
-                            class="inline-flex items-center bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full text-base mt-4 md:mt-0">Download Template
-
-                        </button>
+                      <div
+                        class="
+                          flex
+                          w-80%
+                          h-32
+                          items-center
+                          justify-center
+                          bg-gray-200
+                          sm:rounded-xl
+                        "
+                      >
+                        <form method="GET" action="">
+                          <input
+                            class="
+                              inline-flex
+                              text-center
+                              mx-4
+                              bg-gray-200
+                              border-0
+                              py-1
+                              px-5
+                              focus:outline-none
+                              hover:bg-gray-300
+                              text-gray-900
+                              rounded-full
+                              text-base
+                              mt-5
+                            "
+                            type="file"
+                            id="myFile"
+                            name="filename"
+                          /><br />
+                          <input
+                            class="
+                              inline-flex
+                              items-center
+                              bg-gray-600
+                              border-0
+                              py-1
+                              px-3
+                              focus:outline-none
+                              hover:bg-gray-700
+                              text-gray-100
+                              rounded-full
+                              ml-2
+                              text-base
+                              mt-4
+                            "
+                            type="submit"
+                          />
+                        </form>
+                      </div>
+                      <br />
+                      <button
+                        class="
+                          inline-flex
+                          items-center
+                          bg-gray-500
+                          border-0
+                          py-1
+                          px-3
+                          focus:outline-none
+                          hover:bg-gray-700
+                          text-gray-100
+                          rounded-full
+                          text-base
+                          mt-4
+                          md:mt-0
+                        "
+                      >
+                        Download Template
+                      </button>
                     </td>
 
-                    
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex w-80% h-32 items-center justify-center bg-gray-200 sm:rounded-full">
-                        <form action="" >
-                          <input class="inline-flex text-center mx-4 bg-gray-200 border-0 py-1 px-5 focus:outline-none hover:bg-gray-300 text-gray-900 rounded-full text-base mt-5" type="file"  id="myFile" name="filename"><br>
-                          <input class="inline-flex items-center bg-gray-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full ml-2 text-base mt-4 " type="submit">
-                      </form>
-                    </div>
-                    <br>
-                        <button
-                            class="inline-flex items-center bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 text-gray-100 rounded-full text-base mt-4 md:mt-0">Download Template
-
-                        </button>
+                      <div
+                        class="
+                          flex
+                          w-80%
+                          h-32
+                          items-center
+                          justify-center
+                          bg-gray-200
+                          sm:rounded-xl
+                        "
+                      >
+                        <form method="GET" action="">
+                          <input
+                            class="
+                              inline-flex
+                              text-center
+                              mx-4
+                              bg-gray-200
+                              border-0
+                              py-1
+                              px-5
+                              focus:outline-none
+                              hover:bg-gray-300
+                              text-gray-900
+                              rounded-full
+                              text-base
+                              mt-5
+                            "
+                            type="file"
+                            id="myFile"
+                            name="filename"
+                          /><br />
+                          <input
+                            class="
+                              inline-flex
+                              items-center
+                              bg-gray-600
+                              border-0
+                              py-1
+                              px-3
+                              focus:outline-none
+                              hover:bg-gray-700
+                              text-gray-100
+                              rounded-full
+                              ml-2
+                              text-base
+                              mt-4
+                            "
+                            type="submit"
+                          />
+                        </form>
+                      </div>
+                      <br />
+                      <button
+                        class="
+                          inline-flex
+                          items-center
+                          bg-gray-500
+                          border-0
+                          py-1
+                          px-3
+                          focus:outline-none
+                          hover:bg-gray-700
+                          text-gray-100
+                          rounded-full
+                          text-base
+                          mt-4
+                          md:mt-0
+                        "
+                      >
+                        Download Template
+                      </button>
                     </td>
-
-                    
-                    
                   </tr>
-
                 </tbody>
-                
               </table>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
-
 
 <!-- Upload File Ended -->
 

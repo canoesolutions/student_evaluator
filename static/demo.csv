@@ -1,0 +1,3 @@
+student_id,first_name,last_name,college_name,branch,year,age,gender,mobile_num,email_id,hometown
+1,Nishant,Shrivastava,MIT,MCA,2,22,male,9876543211,nish@gmail.com,nagpur
+2,Rohit,Bhatghare,GHRaisoni,BE,3,23,male,9987564232,rohit@gmail.com,pune
