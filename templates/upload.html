@@ -13,12 +13,8 @@
 <!-- Upload File Started -->
 
 <section class="text-gray-400 bg-gray-300 body-font relative">
-  <div class="container-fluid px-5 py-10 mx-auto">
+  <div class="container-fluid px-5 py-5 mx-auto">
     <div class="flex flex-col text-center w-full mb-12">
-      
-      
-      
-
       <!-- Data Table Started -->
 
       <div class="flex flex-col">
@@ -74,23 +70,24 @@
                         class="
                           flex
                           w-80%
-                          h-32
+                          h-28
                           items-center
                           justify-center
                           bg-gray-200
                           sm:rounded-xl
                         "
                       >
-                      {% if messages %} 
-      {% for message in messages %}
-        <div>
-        <!--                | means OR operator-->
-            <strong>{{message|safe}}</strong>
-        </div>
-      {% endfor %}
-      {% else %} 
-      {{order}}
-                        <form method="GET" action="upload">
+                        {% if messages %} {% for message in messages %}
+                        <div>
+                          <strong>{{message|safe}}</strong>
+                        </div>
+                        {% endfor %} {% else %}
+                        <form
+                          method="POST"
+                          action="upload"
+                          enctype="multipart/form-data"
+                        >
+                          {% csrf_token %}
                           <input
                             class="
                               inline-flex
@@ -105,13 +102,13 @@
                               text-gray-900
                               rounded-full
                               text-base
-                              mt-5
+                              mt-2
                             "
                             type="file"
                             id="file"
                             name="file"
                           /><br />
-                          <input
+                          <button
                             class="
                               inline-flex
                               items-center
@@ -125,10 +122,12 @@
                               rounded-full
                               ml-2
                               text-base
-                              mt-4
+                              mt-2
                             "
                             type="submit"
-                          />
+                          >
+                            Upload
+                          </button>
                         </form>
                         {% endif %}
                       </div>
@@ -159,7 +158,7 @@
                         class="
                           flex
                           w-80%
-                          h-32
+                          h-28
                           items-center
                           justify-center
                           bg-gray-200
@@ -181,13 +180,13 @@
                               text-gray-900
                               rounded-full
                               text-base
-                              mt-5
+                              mt-2
                             "
                             type="file"
                             id="myFile"
                             name="filename"
                           /><br />
-                          <input
+                          <button
                             class="
                               inline-flex
                               items-center
@@ -201,10 +200,12 @@
                               rounded-full
                               ml-2
                               text-base
-                              mt-4
+                              mt-2
                             "
                             type="submit"
-                          />
+                          >
+                            Upload
+                          </button>
                         </form>
                       </div>
                       <br />
@@ -292,7 +293,7 @@
                         class="
                           flex
                           w-80%
-                          h-32
+                          h-28
                           items-center
                           justify-center
                           bg-gray-200
@@ -314,13 +315,13 @@
                               text-gray-900
                               rounded-full
                               text-base
-                              mt-5
+                              mt-2
                             "
                             type="file"
                             id="myFile"
                             name="filename"
                           /><br />
-                          <input
+                          <button
                             class="
                               inline-flex
                               items-center
@@ -334,10 +335,12 @@
                               rounded-full
                               ml-2
                               text-base
-                              mt-4
+                              mt-2
                             "
                             type="submit"
-                          />
+                          >
+                            Upload
+                          </button>
                         </form>
                       </div>
                       <br />
@@ -354,7 +357,7 @@
                           text-gray-100
                           rounded-full
                           text-base
-                          mt-4
+                          mt-2
                           md:mt-0
                         "
                       >
@@ -367,7 +370,7 @@
                         class="
                           flex
                           w-80%
-                          h-32
+                          h-28
                           items-center
                           justify-center
                           bg-gray-200
@@ -389,13 +392,13 @@
                               text-gray-900
                               rounded-full
                               text-base
-                              mt-5
+                              mt-2
                             "
                             type="file"
                             id="myFile"
                             name="filename"
                           /><br />
-                          <input
+                          <button
                             class="
                               inline-flex
                               items-center
@@ -409,10 +412,12 @@
                               rounded-full
                               ml-2
                               text-base
-                              mt-4
+                              mt-2
                             "
                             type="submit"
-                          />
+                          >
+                            Upload
+                          </button>
                         </form>
                       </div>
                       <br />

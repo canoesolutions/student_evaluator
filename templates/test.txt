@@ -27,3 +27,8 @@ Syncup - Python Project
                               <input class="inline-flex text-center ml-20 bg-gray-200 border-0 py-1 px-5 focus:outline-none hover:bg-gray-300 text-gray-900 rounded-full text-base mt-4 md:mt-0" type="file"  id="myFile" name="filename">
                               <input class="inline-flex items-center bg-gray-700 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-700 text-gray-100 rounded-full ml-2 text-base mt-4 md:mt-0" type="submit">
                           </form>
+
+
+student_id,first_name,last_name,college_name,branch,year,age,gender,mobile_num,email_id,hometown,test_date
+1,Nishant,Shrivastava,MIT,MCA,2,22,male,9876543211,nish@gmail.com,nagpur,2021-08-12
+2,Rohit,Bhatghare,GHRaisoni,BE,3,23,male,9987564232,rohit@gmail.com,pune,2021-08-12
