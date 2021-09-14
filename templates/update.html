@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+
+
+<!-- Title Started -->
+
+{% block title %} About Us {% endblock title %}
+
+<!-- Title Ended -->
+
+
+<!-- Body Started -->
+
+{% block body %}
+
+<section class="text-gray-400 bg-gray-300 body-font relative">
+  <div class="container-fluid px-5 py-16 mx-auto">
+    <div class="flex flex-col text-center w-full mb-40">
+
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+          <table class="min-w-full divide-y divide-white">
+             <tbody class="bg-white ">
+
+                <tr>
+                  <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                        Name Of Student
+                  </th>
+
+                  <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                        <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.first_name}} {{students.middle_name}} {{students.last_name}}" > 
+                                                    
+                  </td>
+
+                                                <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                                    Email ID
+                                                </th>
+                                                <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.email_id}}" >
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+
+                                        <tbody class="bg-white">
+                                            <tr>
+                                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                                    Branch/Stream
+                                                </th>
+                                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.branch_name}}" >
+                                                </td>
+                                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                                    Mobile Number
+                                                </th>
+                                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                                   <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value=" {{students.mobile_number}}" >
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="bg-white">
+                                            <tr>
+                                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                                    Year
+                                                </th>
+                                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.student_year}}" >
+                                                </td>
+                                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                                    Gender
+                                                </th>
+                                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.gender}}" >
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                        <tbody class="bg-white">
+                                            <tr>
+                                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                                    College Name
+                                                </th>
+                                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.college_name}}" >
+                                                </td>
+                                                <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                                                    Hometown
+                                                </th>
+                                                <td scope="col" class="text-sm font-medium text-gray-900">
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.hometown}}" >
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                        <tbody class="bg-white">
+                          <tr>
+                          <th scope="col" colspan="4" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                        <input type="submit" class="inline-flex items-center bg-gray-600 border-0 text-gray-200 py-1 px-5 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0" value="UPDATE">
+                        </th>
+                                                
+                                                
+                          </tr>
+
+                                        </tbody>
+
+          </table>
+          
+    </div>
+    
+  </div>
+</section>
+
+{% endblock body %}
+
+<!-- Body Ended -->

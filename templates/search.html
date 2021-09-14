@@ -4,7 +4,7 @@
 
 <!-- Title Started -->
 
-{% block title %} Home {% endblock title %}
+{% block title %} Search {% endblock title %}
 
 <!-- Title Ended -->
 
@@ -16,7 +16,7 @@
 <!-- Tabel Containing Data Started -->
 <section class="text-gray-400 bg-gray-300 body-font relative">
   <div class="container-fluid px-5 py-16 mx-auto">
-    <div class="flex flex-col text-center w-full mb-12">
+    <div class="flex flex-col text-center w-full mb-60">
 
       <!-- Search Box Started -->
 
@@ -36,14 +36,14 @@
           class="inline-flex items-center ml-4 bg-gray-600 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0">SEARCH
 
         </button>
-        <button
+        <!-- <button
           class="ml-72 inline-flex items-center bg-gray-600 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0">Download PDF
 
         </button>
         <button
           class="ml-4 inline-flex items-center bg-gray-600 border-0 text-gray-200 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0">Send as Email
 
-        </button>
+        </button> -->
       </div>
 
       <!-- Search Box Ended -->
@@ -56,7 +56,7 @@
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
               <table class="min-w-full divide-y divide-gray-200" id="dataTable">
-                <thead class="bg-gray-400">
+                <thead class="bg-gray-500">
                   <tr>
 
                     <th scope="col"
@@ -85,134 +85,56 @@
                     </th>
                     <th scope="col"
                       class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
-                      Test Conducted On
+                      Mobile Number
                     </th>
                     <th scope="col"
                       class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider">
-                      View Report
+                      Report
                     </th>
+                    
+                    
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
+                {% for student in students %}
                   <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">
+                    <td class="px-6 py-3 whitespace-nowrap">
                       <input type="checkbox" id="check1" name="chkbx" value="Check1">
 
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm font-medium text-gray-900">Nishant Shrivastava</div>
+                    <td class="px-6 py-3 whitespace-nowrap">
+                      <div class="text-sm font-medium text-gray-900">
+                        <a href="{% url 'update' student.student_id %}">
+                          {{student.first_name}} {{student.last_name}}
+                        </a>
+                      </div>
 
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">MIT, Pune</div>
+                    <td class="px-6 py-3 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">{{student.college_name}}</div>
 
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">MCA</div>
+                    <td class="px-6 py-3 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">{{student.branch_name}}</div>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">Passed Out</div>
+                    <td class="px-6 py-3 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">{{student.student_year}}</div>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">29</div>
+                    <td class="px-6 py-3 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">{{student.age}}</div>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">11-08-2021</div>
+                    <td class="px-6 py-3 whitespace-nowrap">
+                      <div class="text-sm text-gray-900">{{student.mobile_number}}</div>
                     </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                      <a href="report" class="text-indigo-600 hover:text-indigo-900"> View </a>
+                    <td class="px-6 py-3 whitespace-nowrap text-center text-sm font-medium">
+                      <a href="{% url 'report' student.student_id %}" class="border-2 border-indigo-500 rounded-full px-2 text-indigo-600 hover:text-indigo-900"> View </a>
+                      <a href="{% url 'delete' student.student_id %}" class="border-2 border-red-500 rounded-full px-2 ml-5 text-red-600 hover:text-red-900"> Delete </a>
                     </td>
+                   
+                   
                   </tr>
-
-                  <tr>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                      <input type="checkbox" id="check2" name="chkbx" value="Check2">
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm font-medium text-gray-900">Rohit Bhatghare</div>
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">GH Raisoni, Nagpur</div>
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">B.E</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">Passed Out</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">26</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">12-08-2021</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                      <a href="report" class="text-indigo-600 hover:text-indigo-900"> View </a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                      <input type="checkbox" id="check3" name="chkbx" value="Check3">
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm font-medium text-gray-900">Amit Kumar</div>
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">GH Raisoni, Nagpur</div>
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">BA.LLB</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">3</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">24</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">10-08-2021</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                      <a href="report" class="text-indigo-600 hover:text-indigo-900"> View </a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                      <input type="checkbox" id="check4" name="chkbx" value="Check4">
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm font-medium text-gray-900">Tejas Sharma</div>
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">COEP, Pune</div>
-
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">BTech</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">2</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">20</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="text-sm text-gray-900">12-08-2021</div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                      <a href="report" class="text-indigo-600 hover:text-indigo-900"> View </a>
-                    </td>
-                  </tr>
+                  {% endfor %}
+                  
 
                 </tbody>
               </table>

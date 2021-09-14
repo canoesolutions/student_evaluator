@@ -1,22 +1,38 @@
 import csv, io
-from django.shortcuts import render, HttpResponse
-from .models import Student_Details
+from django.shortcuts import redirect, render
+from .models import Emotional_Intelligence, Intellectual_Capacity, Meta_Cognitive_Test, Personal_Test, Student_Details
 from django.contrib import messages
 from datetime import date, datetime
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 def login(request):
     return render(request, 'login.html')
 
+# This Function will work on Index Page to calculate tests
 def index(request):
-    return render(request, 'index.html')
+    
+    ei = Emotional_Intelligence.objects.all().count()
+    ic = Intellectual_Capacity.objects.all().count()
+    pt = Personal_Test.objects.all().count()
+    mct = Meta_Cognitive_Test.objects.all().count()
 
+    all = int(ei) + int(ic) + int(pt) + int(mct)
+
+    context = {'all':all, 'ei':ei, 'ic':ic, 'pt':pt, 'mct':mct }
+
+    return render(request, 'index.html', context)
+
+
+# This Function will work on Search Page
 def search(request):
-    return render(request, 'search.html')
+    students = Student_Details.objects.all().order_by('first_name')
+    return render(request, 'search.html',{'students':students})
 
+# This Function will work on Uploading csv file in database
 def upload(request):
-
-    template = "upload.html"
     data = Student_Details.objects.all()
     
     prompt = {
@@ -25,9 +41,9 @@ def upload(request):
               }
 
     if request.method == "GET":
-        return render(request, template, prompt)
+        return render(request, "upload.html", prompt)
 
-    csv_file = request.FILES['file']
+    csv_file = request.FILES['iefile']
 
     if not csv_file.name.endswith('.csv'):
         messages.error(request, 'THIS IS NOT A SUPPORTED FILE')
@@ -50,18 +66,54 @@ def upload(request):
             mobile_number = column[8],
             email_id = column[9],
             hometown = column[10],
-            test_date = column[11],
         )
 
     context = {}
-    return render(request, template, context)
+    return render(request, "upload.html", context)
    
 
 def about(request):
     return render(request, 'about.html')
 
-def contact(request):
-    return render(request, 'contact.html')
 
-def report(request):
-    return render(request, 'report.html')
+# This function will work on Report Page
+def report(request, pk):
+    students = Student_Details.objects.get(student_id=pk)
+    try:
+        ei = Emotional_Intelligence.objects.get(student_id=pk)
+    except ObjectDoesNotExist:
+        print("report doesn't exist")
+        ei = None
+    try:
+        ic = Intellectual_Capacity.objects.get(student_id=pk)
+    except ObjectDoesNotExist:
+        print("report doesn't exist")
+        ic = None
+    try:
+        pt = Personal_Test.objects.get(student_id=pk)
+    except ObjectDoesNotExist:
+        print("report doesn't exist")
+        pt = None
+    try:
+        mct = Meta_Cognitive_Test.objects.get(student_id=pk)
+    except ObjectDoesNotExist:
+        print("report doesn't exist")
+        mct = None
+    
+
+    context = {'students':students, 'ei':ei, 'ic':ic, 'pt':pt, 'mct':mct }
+    return render(request, 'report.html', context)
+
+
+# This function will Delete records on the Search Page
+def delete(request, pk):
+    students = Student_Details.objects.get(student_id=pk)
+    students.delete()
+    return redirect('/search')
+
+
+# This Function will Update the Student Record on Search Page
+def update(request, pk):
+    students = Student_Details.objects.get(student_id=pk)
+    students.save()
+    return render(request, 'update.html', {'students': students})

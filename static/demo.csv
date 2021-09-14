@@ -1,5 +1,5 @@
-first_name,middle_name,last_name,gender,age,college_name,student_year,branch_name,mobile_number,email_id,hometown,test_date
-Nishant,,Shrivastava,male,22,MIT,2,MCA,9876543211,nish@gmail.com,pune,2021-08-12
-Rohit,Narayan,Bhatghare,male,23,GHRaisoni,3,BE,9987564232,rohit@gmail.com,nagpur,2021-08-12
-Amit,,Kumar,male,23,GHRaisoni,3,BALLB,9876555225,amit@gmail.com,nagpur,2021-08-15
-Tejas,,Sharma,male,21,COEP,2,BTech,9876543220,tejas@gmail.com,pune,2021-08-20
+first_name,middle_name,last_name,gender,age,college_name,student_year,branch_name,mobile_number,email_id,hometown
+Nishant,,Shrivastava,male,22,MIT,2,MCA,9876543211,nish@gmail.com,pune
+Rohit,Narayan,Bhatghare,male,23,GHRaisoni,3,BE,9987564232,rohit@gmail.com,nagpur
+Amit,,Kumar,male,23,GHRaisoni,3,BALLB,9876555225,amit@gmail.com,nagpur
+Tejas,,Sharma,male,21,COEP,2,BTech,9876543220,tejas@gmail.com,pune

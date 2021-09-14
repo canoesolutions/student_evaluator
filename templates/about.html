@@ -1,75 +1,1500 @@
 {% extends 'base.html' %}
 
-
 <!-- Title Started -->
 
-{% block title %} About Us {% endblock title %}
+{% block title %} Test Report {% endblock title %}
 
 <!-- Title Ended -->
-
 
 <!-- Body Started -->
 
 {% block body %}
 
-<!-- About Us Started -->
+<section class="text-gray-400 bg-gray-300 body-font relative">
+  <div class="container px-5 py-5 mx-auto">
 
-<section class="text-gray-400 bg-gray-900 body-font">
-  <div class="container px-20 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">OUR TEAM</h1>
-      
+    <div class="w-full mx-auto mt-4  rounded">
+      <!-- Tabs -->
+      <ul id="tabs" class="inline-flex w-2/3 mx-52 px-5 pt-2 rounded-xl">
+        <li class="px-4 py-2 -mb-px font-semibold text-gray-900 border-b-2 border-gray-300 rounded-t opacity-60"><a
+            id="default-tab" href="#first">Emotional Intelligence</a></li>
+        <li class="px-4 py-2 font-semibold text-gray-900 border-b-2 border-gray-300 rounded-t opacity-60"><a
+            href="#second">Intellectual Capacity</a></li>
+        <li class="px-4 py-2 font-semibold text-gray-900 border-b-2 border-gray-300 rounded-t opacity-60"><a
+            href="#third">Personality Test</a></li>
+        <li class="px-4 py-2 font-semibold text-gray-900 border-b-2 border-gray-300 rounded-t opacity-60"><a
+            href="#fourth">Meta-Cognitive Test</a></li>
+      </ul>
+
+      <!-- Tab Contents -->
+      <div id="tab-contents">
+        <div id="first" class="p-4">
+
+<!-- EMOTIONAL INTELLIGENCE TAB STARTED -->
+
+          <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-auto mb-5 lg:mx-24">
+              <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <table class="min-w-full divide-y divide-gray-100">
+
+
+                    <thead class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          <div class="flex flex-col text-center w-full mb-5">
+                            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-700">
+                              Emotional Intelligence / IQ
+                            </h1>
+                            <h3 class="sm:text-xl text-xl font-medium title-font mb-2 text-gray-800">
+                              <a href="">TEST REPORT</a>
+                            </h3>
+                          </div>
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white">
+
+                      <tr>
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Name Of Student
+                        </th>
+
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.first_name}} {{students.middle_name}} {{students.last_name}}
+                        </td>
+
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Email ID
+                        </th>
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.email_id}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Branch/Stream
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.branch_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Mobile Number
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.mobile_number}}
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Year
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.student_year}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Gender
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.gender}}
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          College Name
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.college_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Hometown
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.hometown}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          
+                          <canvas id="myChart" width="400" height="400"></canvas>
+
+
+
+
+
+
+
+
+
+
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </tbody>
+
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" colspan="2" class="
+                          
+                          py-3
+                          text-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          text-base
+                          uppercase
+                          tracking-wider
+                        ">Emotional Quotient</td>
+
+                        <td scope="col" colspan="2" class="
+                          px-14
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-xl
+                          text-gray-900
+                          uppercase
+                          tracking-wider
+                        ">{{detail.emotional_quotient}}</td>
+
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" colspan="4" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-700
+                          text-center
+                          uppercase
+                          tracking-wider
+                        ">EQ Range : 70 - 130
+                        </td>
+
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                          Self Awareness
+                        </td>
+                        <td scope="col" colspan="3" class="pr-3 pt-5 pb-3 justify-right text-sm text-gray-900">
+                          Self awareness is the recognition of that awareness.
+                          Self-awareness is how an individual consciously knows and
+                          understands him/her own character, feelings, motives and
+                          desires. If you are highly self-aware, you can objectively
+                          evaluate yourself, manage your emotions, align your behaviour
+                          with values, and understand correctly how others perceive(to
+                          notice or realize something) you. <br />
+                          <b>Skills Involved - Emotional Awareness, Accurate Self
+                            Assessment and self confidence.</b>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                          Self Management
+                        </td>
+                        <td scope="col" colspan="3" class="pr-3 py-3 justify-right text-sm text-gray-900">
+                          Self-management is the ability to prioritize goals, decide
+                          what must be done, and be accountable to complete the
+                          necessary actions. Comprehensive self-management involves four
+                          realms(an area of activity): physical, mental, social and
+                          spiritual.<br />
+                          <b>
+                            Skills Involved - Trust, impulse control, conscientiousness,
+                            adaptability, achievement motivation, initiative and
+                            Optimism.</b>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                          Social Awareness
+                        </td>
+                        <td scope="col" colspan="3" class="
+                          pr-3
+                          py-3
+                          
+                          text-sm
+                          
+                          text-gray-900
+                        ">
+                          - Empathy : Understanding the other person's emotions, need
+                          and concerns.<br />
+                          - Organisational Awareness : The ability to understandthe
+                          politics in the organization and how this can affect the
+                          people working in them.<br />
+                          - Service : the ability to understand and meet the needs of
+                          clients and customers.<br />
+                          <b>Skills Involved - Empathy, Service orientation and
+                            Political awareness</b>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                          Social Skills
+                        </td>
+                        <td scope="col" colspan="3" class="
+                          pr-3
+                          py-3
+                          
+                          text-sm
+                          
+                          text-gray-900
+                        ">
+                          Social skills are the skills we use to communicate and
+                          interact with each other, both verbally and non-verbally,
+                          through gestures, body language and our personal appearance.
+                          Social skills are important because they are the foundation
+                          for having positive relationships with others with your
+                          partners, friends, and for your career.<br />
+                          <b>
+                            Skills Involved - Developing Others, Influence, Conflict
+                            Management, Leadership, Change Catalyst, Building Bonds and
+                            Team Building & Collaboration.</b>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                          Emotional Intelligence
+                        </td>
+                        <td scope="col" colspan="3" class="
+                          pr-3
+                          py-3
+                         
+                          text-sm
+                         
+                          text-gray-900
+                        ">
+                          This is a combination of the above parameters.
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+
+                        <td scope="col" colspan="4" class="
+                          px-6
+                          pt-5
+                          text-center text-sm
+                          font-medium
+                          text-gray-600
+                          uppercase
+                          tracking-wider
+                        ">
+                          <u>Important message to the student</u>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+
+                        <td scope="col" colspan="4" class="
+                          px-6
+                          py-3
+                          text-center text-sm
+                          text-gray-900
+                          font-medium
+                          tracking-wider
+                        ">
+                          All the students needs to focus more on a particular competency rating which is
+                          below the Average.<br>
+                          Proper actions must be taken on every competency for further improvement.
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+
+                        <td scope="col" class="
+                          px-6
+                          py-5
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          text-base
+                          tracking-wider
+                        ">
+                          Test Conducted On :
+                        </td>
+
+
+                        <td scope="col" class="
+                          px-6
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-900
+                          text-base
+                          tracking-wider
+                        ">
+                          12-08-2021
+                        </td>
+
+                        <td scope="col" class="
+                          px-6
+                          py-5
+                          text-center text-sm
+                          font-medium
+                          text-gray-900
+                          text-base
+                          tracking-wider
+                        ">
+
+                        </td>
+
+                        <td scope="col" class="
+                        w-1/4
+                          px-6
+                          pt-14
+                          pb-5
+                          text-center text-sm
+                          font-normal
+                          text-sm
+                          text-gray-900
+                          tracking-wider
+                        ">
+                          <b>ANIL TIJARE</b><br>
+                          Dean Training & Placement<br>
+                          Shri Sai Shikshan Sanstha's<br>
+                          NIT Group of Institutions
+                        </td>
+
+
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+
+                        <td scope="col" class="
+                                    px-6
+                                    pt-5
+                                    text-center 
+                                    text-sm
+                                    font-medium
+                                    text-gray-600
+                                    uppercase
+                                    tracking-wider
+                                ">
+
+                        </td>
+                        <td scope="col" class="
+                                    px-6
+                                    pt-5
+                                    text-center 
+                                    text-sm
+                                    font-medium
+                                    text-gray-600
+                                    uppercase
+                                    tracking-wider
+                                ">
+
+                          <button class="
+                                        items-center
+                                        bg-gray-600
+                                        border-0
+                                        py-1
+                                        px-3
+                                        focus:outline-none
+                                        hover:bg-gray-700
+                                        text-gray-100
+                                        rounded-full
+                                        text-base
+                                        
+                                        my-4
+                                        md:mt-0
+                                      ">
+                            Download Report as PDF
+                          </button>
+
+                        </td>
+                        <td scope="col" class="
+                                    px-6
+                                    pt-5
+                                    text-center 
+                                    text-sm
+                                    font-medium
+                                    text-gray-600
+                                    uppercase
+                                    tracking-wider
+                                ">
+
+                          <button class="
+                                        items-center
+                                        bg-gray-600
+                                        border-0
+                                        py-1
+                                        px-3
+                                        focus:outline-none
+                                        hover:bg-gray-700
+                                        text-gray-100
+                                        rounded-full
+                                        text-base
+                                        my-4
+                                        md:mt-0
+                                      ">
+                            Send Report as Email
+                          </button>
+
+
+                        </td>
+                        <td scope="col" class="
+                                    px-6
+                                    pt-5
+                                    text-center 
+                                    text-sm
+                                    font-medium
+                                    text-gray-600
+                                    uppercase
+                                    tracking-wider
+                                ">
+
+                        </td>
+                      </tr>
+                    </tbody>
+
+
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+<!-- EMOTIONAL INTELLIGENCE TAB ENDED -->
+
+<!-- INTELLECTUAL CAPACITY TAB STARTED -->
+
+        <div id="second" class="hidden p-4">
+
+
+
+
+          <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-auto mb-5 lg:mx-24">
+              <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <table class="min-w-full divide-y divide-gray-100">
+
+
+                    <thead class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          <div class="flex flex-col text-center w-full mb-5">
+                            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-700">
+                              Emotional Intelligence / IQ
+                            </h1>
+                            <h3 class="sm:text-xl text-xl font-medium title-font mb-2 text-gray-800">
+                              <a href="">TEST REPORT</a>
+                            </h3>
+                          </div>
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white">
+
+                      <tr>
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Name Of Student
+                        </th>
+
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.first_name}} {{students.middle_name}} {{students.last_name}}
+                        </td>
+
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Email ID
+                        </th>
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.email_id}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Branch/Stream
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.branch_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Mobile Number
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.mobile_number}}
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Year
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.student_year}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Gender
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.gender}}
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          College Name
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.college_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Hometown
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.hometown}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          <!-- <img src="static\images\bar.png" /> --> Intellectual
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </tbody>
+
+
+
+
+
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+<!-- INTELLECTUAL CAPACITY TAB ENDED -->
+
+<!-- PERSONALITY TEST TAB STARTED -->
+
+        <div id="third" class="hidden p-4">
+
+
+
+          <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-auto mb-5 lg:mx-24">
+              <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <table class="min-w-full divide-y divide-gray-100">
+
+
+                    <thead class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          <div class="flex flex-col text-center w-full mb-5">
+                            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-700">
+                              Emotional Intelligence / IQ
+                            </h1>
+                            <h3 class="sm:text-xl text-xl font-medium title-font mb-2 text-gray-800">
+                              <a href="">TEST REPORT</a>
+                            </h3>
+                          </div>
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white">
+
+                      <tr>
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Name Of Student
+                        </th>
+
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.first_name}} {{students.middle_name}} {{students.last_name}}
+                        </td>
+
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Email ID
+                        </th>
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.email_id}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Branch/Stream
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.branch_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Mobile Number
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.mobile_number}}
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Year
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.student_year}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Gender
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.gender}}
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          College Name
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.college_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Hometown
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.hometown}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          <!-- <img src="static\images\bar.png" /> --> Personality
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </tbody>
+
+
+
+
+
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+<!-- PERSONALITY TEST TAB ENDED -->
+
+<!-- META-COGNITIVE TEST TAB STARTED -->
+
+        <div id="fourth" class="hidden p-4">
+
+
+
+          <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-auto mb-5 lg:mx-24">
+              <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-2">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <table class="min-w-full divide-y divide-gray-100">
+
+
+                    <thead class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          <div class="flex flex-col text-center w-full mb-5">
+                            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-700">
+                              Emotional Intelligence / IQ
+                            </h1>
+                            <h3 class="sm:text-xl text-xl font-medium title-font mb-2 text-gray-800">
+                              <a href="">TEST REPORT</a>
+                            </h3>
+                          </div>
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white">
+
+                      <tr>
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Name Of Student
+                        </th>
+
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.first_name}} {{students.middle_name}} {{students.last_name}}
+                        </td>
+
+                        <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Email ID
+                        </th>
+                        <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                          {{students.email_id}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Branch/Stream
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.branch_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Mobile Number
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.mobile_number}}
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Year
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.student_year}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Gender
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.gender}}
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          College Name
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.college_name}}
+                        </td>
+                        <th scope="col" class="
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          Hometown
+                        </th>
+                        <td scope="col" class="text-sm font-medium text-gray-900">
+                          {{students.hometown}}
+                        </td>
+                      </tr>
+
+                    </tbody>
+
+
+
+                    <tbody class="bg-white">
+                      <tr>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                        <td scope="col" colspan="2" class="
+                          px-auto
+                          py-5
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                          <!-- <img src="static\images\bar.png" /> --> Meta-Cognitive
+                        </td>
+                        <td scope="col" class="
+                          px-6
+                          py-3
+                          justify-right
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        "></td>
+                      </tr>
+                    </tbody>
+
+
+
+
+
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        
+        <!-- META-COGNITIVE TEST TAB ENDED -->
+      </div>
     </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 lg:w-1/2">
-        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="static\images\employee.png">
-          <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-white">Test Name 1</h2>
-            <h3 class="text-gray-500 mb-3">Position 1</h3>
-            <p class="mb-4">Description 1</p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="p-4 lg:w-1/2">
-        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="static\images\employee.png">
-          <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-white">Test Name 2</h2>
-            <h3 class="text-gray-500 mb-3">Position 2</h3>
-            <p class="mb-4">Description 2</p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="p-4 lg:w-1/2">
-        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="static\images\employee.png">
-          <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-white">Test Name 3</h2>
-            <h3 class="text-gray-500 mb-3">Position 3</h3>
-            <p class="mb-4">Description 3</p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="p-4 lg:w-1/2">
-        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4" src="static\images\employee.png">
-          <div class="flex-grow sm:pl-8">
-            <h2 class="title-font font-medium text-lg text-white">Test Name 4</h2>
-            <h3 class="text-gray-500 mb-3">Position 4</h3>
-            <p class="mb-4">Description 4</p>
-            
-          </div>
-        </div>
-      </div>
-    </div>
+
+
   </div>
 </section>
 
-<!-- About Us Ended -->
+
+
+<!-- TAB SCRIPT STARTED -->
+<script>
+  let tabsContainer = document.querySelector("#tabs");
+
+  let tabTogglers = tabsContainer.querySelectorAll("a");
+  console.log(tabTogglers);
+
+  tabTogglers.forEach(function (toggler) {
+    toggler.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      let tabName = this.getAttribute("href");
+
+      let tabContents = document.querySelector("#tab-contents");
+
+      for (let i = 0; i < tabContents.children.length; i++) {
+
+        tabTogglers[i].parentElement.classList.remove("border-blue-400", "border-b", "-mb-px", "opacity-100"); tabContents.children[i].classList.remove("hidden");
+        if ("#" + tabContents.children[i].id === tabName) {
+          continue;
+        }
+        tabContents.children[i].classList.add("hidden");
+
+      }
+      e.target.parentElement.classList.add("border-blue-400", "border-b-4", "-mb-px", "opacity-100");
+    });
+  });
+
+  document.getElementById("default-tab").click();
+
+
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            // backgroundColor: [
+            //     'rgba(255, 99, 132, 0.2)',
+            //     'rgba(54, 162, 235, 0.2)',
+            //     'rgba(255, 206, 86, 0.2)',
+            //     'rgba(75, 192, 192, 0.2)',
+            //     'rgba(153, 102, 255, 0.2)',
+            //     'rgba(255, 159, 64, 0.2)'
+            // ],
+            // borderColor: [
+            //     'rgba(255, 99, 132, 1)',
+            //     'rgba(54, 162, 235, 1)',
+            //     'rgba(255, 206, 86, 1)',
+            //     'rgba(75, 192, 192, 1)',
+            //     'rgba(153, 102, 255, 1)',
+            //     'rgba(255, 159, 64, 1)'
+            // ],
+            // borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+        
+    }
+});
+
+
+</script>
+
+<!-- TAB SCRIPT ENDED -->
+
+<!-- Report Table Ended -->
 
 {% endblock body %}
 

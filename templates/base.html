@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="static\css\style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.11/tailwind.min.css"/>
+    <!-- <link href="static\css\style.css" rel="stylesheet"> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <title>{% block title %} {% endblock title %} | Student Evaluator</title>
 </head>
 
@@ -16,7 +19,7 @@
 
     <header class="text-gray-300 bg-gray-500 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="index">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" href="/index">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-gray-600 rounded-full"
                     viewBox="0 0 24 24">
@@ -25,11 +28,11 @@
                 <span class="ml-3 text-xl">Student Evaluator</span>
             </a>
             <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 text-gray-200 hover:text-white" href="index">Dashboard</a>
-                <a class="mr-5 text-gray-200 hover:text-white" href="search">Search</a>
-                <a class="mr-5 text-gray-200 hover:text-white" href="upload">Upload File</a>
-                <!-- <a class="mr-5 hover:text-white" href="about">About Us</a>
-                <a class="mr-5 hover:text-white" href="contact">Contact Us</a> -->
+                <a class="mr-5 text-gray-200 hover:text-white" href="/index">Dashboard</a>
+                <a class="mr-5 text-gray-200 hover:text-white" href="/search">Search</a>
+                <a class="mr-5 text-gray-200 hover:text-white" href="/upload">Upload File</a>
+                <!-- <a class="mr-5 hover:text-white" href="/about">About Us</a> -->
+                <!-- <a class="mr-5 hover:text-white" href="contact">Contact Us</a> -->
 
             </nav>
             <button
@@ -73,7 +76,13 @@
 
     <!-- Footer Ended -->
 
-    <script src="static\js\eval.js"></script>
+    <!-- <script type="text/javascript" src="static\js\eval.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.es.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 
 </html>
