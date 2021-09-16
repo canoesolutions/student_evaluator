@@ -17,7 +17,7 @@ class Student_Details(models.Model):
     mobile_number = models.CharField(max_length=10, unique=True)
     email_id = models.EmailField(max_length=254, unique=True)
     hometown = models.CharField(max_length=20)
-    test_date = models.DateField(blank=True, null=True)
+    
     
     def __str__(self):
         return self.first_name + ' ' + self.last_name
@@ -25,13 +25,14 @@ class Student_Details(models.Model):
 
 class Emotional_Intelligence(models.Model):
     ei_id = models.AutoField(primary_key=True)
-    student = models.ForeignKey('Student_Details', default="", on_delete=models.CASCADE)
+    student_id = models.ForeignKey('Student_Details', default="", on_delete=models.CASCADE)
     self_awareness = models.FloatField(null=True, default="")
     self_management = models.FloatField(null=True, default="")
     social_awareness = models.FloatField(null=True, default="")
     social_skills = models.FloatField(null=True, default="")
     emotional_intelligence = models.FloatField(null=True, default="")
     emotional_quotient = models.FloatField(null=True, default="")
+    eitest_date = models.DateField(blank=True, null=True)
     # created_by = models.CharField(max_length=20)
     # created_on = models.DateField(blank=True, null=True)
     # updated_by = models.CharField(max_length=20)
@@ -47,6 +48,7 @@ class Intellectual_Capacity(models.Model):
     critical_reasoning = models.IntegerField(null=True, default="")
     abstract_reasoning = models.IntegerField(null=True, default="")
     intelligence_quotient = models.IntegerField(null=True, default="")
+    ictest_date = models.DateField(blank=True, null=True)
     # created_by = models.CharField(max_length=20)
     # created_on = models.DateField(blank=True, null=True)
     # updated_by = models.CharField(max_length=20)
@@ -71,6 +73,7 @@ class Personal_Test(models.Model):
     use_of_influence = models.IntegerField(null=True, default="")
     average_competency = models.FloatField(null=True, default="")
     correction_factor = models.IntegerField(null=True, default="")
+    pttest_date = models.DateField(blank=True, null=True)
     # created_by = models.CharField(max_length=20)
     # created_on = models.DateField(blank=True, null=True)
     # updated_by = models.CharField(max_length=20)
@@ -84,6 +87,7 @@ class Meta_Cognitive_Test(models.Model):
     implementation_skill = models.IntegerField(null=True, default="")
     monitoring_skill = models.IntegerField(null=True, default="")
     evalauation_skill = models.IntegerField(null=True, default="")
+    mcttest_date = models.DateField(blank=True, null=True)
     # created_by = models.CharField(max_length=20)
     # created_on = models.DateField(blank=True, null=True)
     # updated_by = models.CharField(max_length=20)

@@ -6,6 +6,7 @@ from datetime import date, datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
+from django.db import IntegrityError
 
 # Create your views here.
 def login(request):
@@ -31,8 +32,17 @@ def search(request):
     students = Student_Details.objects.all().order_by('first_name')
     return render(request, 'search.html',{'students':students})
 
-# This Function will work on Uploading csv file in database
+#This Function will redirect to the Upload Page
 def upload(request):
+    return render(request, "upload.html")
+
+
+
+
+
+############################################################
+# This Function will Upload Emotional Intelligence csv file
+def uploadei(request):
     data = Student_Details.objects.all()
     
     prompt = {
@@ -43,6 +53,8 @@ def upload(request):
     if request.method == "GET":
         return render(request, "upload.html", prompt)
 
+
+    #Emotional Intelligence Upload
     csv_file = request.FILES['iefile']
 
     if not csv_file.name.endswith('.csv'):
@@ -53,29 +65,123 @@ def upload(request):
     io_string = io.StringIO(data_set)
     next(io_string)
     for column in csv.reader(io_string, delimiter=',', quotechar="|"):
-        _, created = Student_Details.objects.update_or_create(
+        try:
+            student = Student_Details.objects.get(email_id=column[10].strip())
+        except:
+            student = None
+        
+        stud = None
+        if student == None:
+
+            created = Student_Details.objects.create(
             
-            first_name = column[0],
-            middle_name = column[1],
-            last_name = column[2],
-            gender = column[3],
-            age = column[4],
-            college_name = column[5],
-            student_year = column[6],
-            branch_name = column[7],
-            mobile_number = column[8],
-            email_id = column[9],
-            hometown = column[10],
-        )
+                first_name = column[1],
+                middle_name = column[2],
+                last_name = column[3],
+                gender = column[4],
+                age = column[5],
+                college_name = column[6],
+                student_year = column[7],
+                branch_name = column[8],
+                mobile_number = column[9],
+                email_id = column[10],
+                hometown = column[11],
+            )
+            stud = created
+        else:
+            stud = student
+        createie = Emotional_Intelligence.objects.update_or_create(
+                student_id = stud,
+                self_awareness = column[12],
+                self_management = column[13],
+                social_awareness = column[14],
+                social_skills = column[15],
+                emotional_intelligence = column[16],
+                emotional_quotient = column[17],
+                eitest_date = column[18],
+                
+            )
 
     context = {}
     return render(request, "upload.html", context)
-   
+
+
+
+
+
+##########################################################
+#This Function will  Upload Intellectual Capacity csv File 
+def uploadic(request):
+    data = Student_Details.objects.all()
+    
+    prompt = {
+        'order': 'Please check the order of the coloumns in sheet' ,
+        'profiles': data 
+              }
+
+    if request.method == "GET":
+        return render(request, "upload.html", prompt)
+
+
+    #Intellectual Capacity Upload
+    csv_file = request.FILES['icfile']
+
+    if not csv_file.name.endswith('.csv'):
+        messages.error(request, 'THIS IS NOT A SUPPORTED FILE')
+
+    data_set = csv_file.read().decode('UTF-8')
+
+    io_string = io.StringIO(data_set)
+    next(io_string)
+    for column in csv.reader(io_string, delimiter=',', quotechar="|"):
+        try:
+            student = Student_Details.objects.get(email_id=column[10].strip())
+        except:
+            student = None
+        
+        stud = None
+        if student == None:
+
+            created = Student_Details.objects.create(
+            
+                first_name = column[1],
+                middle_name = column[2],
+                last_name = column[3],
+                gender = column[4],
+                age = column[5],
+                college_name = column[6],
+                student_year = column[7],
+                branch_name = column[8],
+                mobile_number = column[9],
+                email_id = column[10],
+                hometown = column[11],
+            )
+            stud = created
+        else:
+            stud = student
+        creatic = Intellectual_Capacity.objects.update_or_create(
+                student_id = stud,
+                clear_thinking = column[12],
+                observational_ability = column[13],
+                reasoning_ability = column[14],
+                critical_reasoning = column[15],
+                abstract_reasoning = column[16],
+                intelligence_quotient = column[17],
+                ictest_date = column[18],
+                
+            )
+
+    context = {}
+    return render(request, "upload.html", context)
+
+
+
 
 def about(request):
     return render(request, 'about.html')
 
 
+########################################
 # This function will work on Report Page
 def report(request, pk):
     students = Student_Details.objects.get(student_id=pk)

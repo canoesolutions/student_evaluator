@@ -84,7 +84,7 @@
                         {% endfor %} {% else %}
                         <form
                           method="POST"
-                          action="upload"
+                          action="uploadei"
                           enctype="multipart/form-data"
                         >
                           {% csrf_token %}
@@ -165,7 +165,17 @@
                           sm:rounded-3xl
                         "
                       >
-                        <form method="GET" action="">
+                        {% if messages %} {% for message in messages %}
+                        <div>
+                          <strong>{{message|safe}}</strong>
+                        </div>
+                        {% endfor %} {% else %}
+                        <form
+                          method="POST"
+                          action="uploadic"
+                          enctype="multipart/form-data"
+                        >
+                          {% csrf_token %}
                           <input
                             class="
                               inline-flex
@@ -183,8 +193,8 @@
                               mt-2
                             "
                             type="file"
-                            id="myFile"
-                            name="filename"
+                            id="icfile"
+                            name="icfile"
                           /><br />
                           <button
                             class="
@@ -207,6 +217,7 @@
                             Upload
                           </button>
                         </form>
+                        {% endif %}
                       </div>
                       <br />
                       <button
@@ -318,8 +329,8 @@
                               mt-2
                             "
                             type="file"
-                            id="myFile"
-                            name="filename"
+                            id="ptfile"
+                            name="ptfile"
                           /><br />
                           <button
                             class="
@@ -395,8 +406,8 @@
                               mt-2
                             "
                             type="file"
-                            id="myFile"
-                            name="filename"
+                            id="mctfile"
+                            name="mctfile"
                           /><br />
                           <button
                             class="
