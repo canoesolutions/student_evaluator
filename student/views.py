@@ -176,6 +176,146 @@ def uploadic(request):
 
 
 
+##########################################################
+#This Function will  Upload Personality Test csv File 
+def uploadpt(request):
+    data = Student_Details.objects.all()
+    
+    prompt = {
+        'order': 'Please check the order of the coloumns in sheet' ,
+        'profiles': data 
+              }
+
+    if request.method == "GET":
+        return render(request, "upload.html", prompt)
+
+
+    #Intellectual Capacity Upload
+    csv_file = request.FILES['ptfile']
+
+    if not csv_file.name.endswith('.csv'):
+        messages.error(request, 'THIS IS NOT A SUPPORTED FILE')
+
+    data_set = csv_file.read().decode('UTF-8')
+
+    io_string = io.StringIO(data_set)
+    next(io_string)
+    for column in csv.reader(io_string, delimiter=',', quotechar="|"):
+        try:
+            student = Student_Details.objects.get(email_id=column[10].strip())
+        except:
+            student = None
+        
+        stud = None
+        if student == None:
+
+            created = Student_Details.objects.create(
+            
+                first_name = column[1],
+                middle_name = column[2],
+                last_name = column[3],
+                gender = column[4],
+                age = column[5],
+                college_name = column[6],
+                student_year = column[7],
+                branch_name = column[8],
+                mobile_number = column[9],
+                email_id = column[10],
+                hometown = column[11],
+            )
+            stud = created
+        else:
+            stud = student
+        creatic = Personal_Test.objects.update_or_create(
+                student_id = stud,
+                initiative = column[12],
+                sees_act = column[13],
+                persistence = column[14],
+                info_seek = column[15],
+                concern_high = column[16],
+                commitment_work = column[17],
+                efficiency_orientation = column[18],
+                systematic_planning = column[19],
+                problem_solving = column[20],
+                self_confidence = column[21],
+                assertiveness = column[22],
+                persuasion = column[23],
+                use_of_influence = column[24],
+                average_competency = column[25],
+                correction_factor = column[26],
+                pttest_date = column[27],
+                
+            )
+
+    context = {}
+    return render(request, "upload.html", context)
+
+
+##########################################################
+#This Function will  Upload Meta-Cognitive Test csv File 
+def uploadmct(request):
+    data = Student_Details.objects.all()
+    
+    prompt = {
+        'order': 'Please check the order of the coloumns in sheet' ,
+        'profiles': data 
+              }
+
+    if request.method == "GET":
+        return render(request, "upload.html", prompt)
+
+
+    #Intellectual Capacity Upload
+    csv_file = request.FILES['mctfile']
+
+    if not csv_file.name.endswith('.csv'):
+        messages.error(request, 'THIS IS NOT A SUPPORTED FILE')
+
+    data_set = csv_file.read().decode('UTF-8')
+
+    io_string = io.StringIO(data_set)
+    next(io_string)
+    for column in csv.reader(io_string, delimiter=',', quotechar="|"):
+        try:
+            student = Student_Details.objects.get(email_id=column[10].strip())
+        except:
+            student = None
+        
+        stud = None
+        if student == None:
+
+            created = Student_Details.objects.create(
+            
+                first_name = column[1],
+                middle_name = column[2],
+                last_name = column[3],
+                gender = column[4],
+                age = column[5],
+                college_name = column[6],
+                student_year = column[7],
+                branch_name = column[8],
+                mobile_number = column[9],
+                email_id = column[10],
+                hometown = column[11],
+            )
+            stud = created
+        else:
+            stud = student
+        creatic = Meta_Cognitive_Test.objects.update_or_create(
+                student_id = stud,
+                planning_skill = column[12],
+                implementation_skill = column[13],
+                monitoring_skill = column[14],
+                evalauation_skill = column[15],
+                mcttest_date = column[16],
+                
+            )
+
+    context = {}
+    return render(request, "upload.html", context)
+
+
+
 
 def about(request):
     return render(request, 'about.html')

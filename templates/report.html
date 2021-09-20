@@ -516,7 +516,7 @@
                           
                           tracking-wider
                         ">
-                                                    {{students.test_date}}
+                                                    {{ei.eitest_date}}
                                                 </td>
 
                                                 <td scope="col" class="
@@ -531,6 +531,9 @@
 
                                                 </td>
 
+
+
+
                                                 <td scope="col" class="
                         w-1/4
                           px-6
@@ -542,6 +545,7 @@
                           text-gray-900
                           tracking-wider
                         ">
+                                                    <img src="../static/images/signature.png">
                                                     <b>ANIL TIJARE</b><br>
                                                     Dean Training & Placement<br>
                                                     Shri Sai Shikshan Sanstha's<br>
@@ -1169,7 +1173,7 @@
                           
                           tracking-wider
                         ">
-                                                    {{students.test_date}}
+                                                    {{ic.ictest_date}}
                                                 </td>
 
                                                 <td scope="col" class="
@@ -1195,6 +1199,7 @@
                           text-gray-900
                           tracking-wider
                         ">
+                                                    <img src="../static/images/signature.png">
                                                     <b>ANIL TIJARE</b><br>
                                                     Dean Training & Placement<br>
                                                     Shri Sai Shikshan Sanstha's<br>
@@ -1879,7 +1884,7 @@
                           
                           tracking-wider
                         ">
-                                                    {{students.test_date}}
+                                                    {{pt.pttest_date}}
                                                 </td>
 
                                                 <td scope="col" class="
@@ -1905,6 +1910,7 @@
                           text-gray-900
                           tracking-wider
                         ">
+                                                    <img src="../static/images/signature.png">
                                                     <b>ANIL TIJARE</b><br>
                                                     Dean Training & Placement<br>
                                                     Shri Sai Shikshan Sanstha's<br>
@@ -2257,6 +2263,45 @@
 
                                         <tbody class="bg-white">
                                             <tr>
+                                                
+                                                <td scope="col">
+                        
+
+
+
+
+                                                </td>
+                                                <td scope="col" colspan="2" class="
+                                                    pl-5
+                                                    pb-6
+                                                    text-sm
+                                                    
+                                                    text-gray-500
+                                                    
+                                                    tracking-wider
+                                                    ">
+                                                    Planning Skills - Out of 60 <br>
+                                                    Implementation Skills - Out of 45 <br>
+                                                    Monitoring Skills - Out of 55 <br>
+                                                    Evalauation Skills - Out of 50
+
+
+
+
+                                                </td>
+                                                <td scope="col">
+                        
+
+
+
+
+                                                </td>
+                                                
+                                            </tr>
+                                        </tbody>
+
+                                        <tbody class="bg-white">
+                                            <tr>
                                                 <td scope="col" class="
                           w-1/4
                           px-6
@@ -2448,7 +2493,7 @@
                           
                           tracking-wider
                         ">
-                                                    {{students.test_date}}
+                                                    {{mct.mcttest_date}}
                                                 </td>
 
                                                 <td scope="col" class="
@@ -2474,6 +2519,7 @@
                           text-gray-900
                           tracking-wider
                         ">
+                                                    <img src="../static/images/signature.png">
                                                     <b>ANIL TIJARE</b><br>
                                                     Dean Training & Placement<br>
                                                     Shri Sai Shikshan Sanstha's<br>
@@ -2655,19 +2701,15 @@
             borderColor: [
                 'rgb(107, 114, 128)',
             ],
-            borderWidth: 2
+            borderWidth: 2,
+            datalabels: {
+                color : 'black',
+            }  
             
         }]
     },
     options: {
         plugins: {
-            datalabels: {
-                anchor :'end',
-                align :'top',
-                // and if you need to format how the value is displayed...
-                formatter: function(value, ctx4) {
-                    return GetValueFormatted(value);
-                }},
             legend: {
                 position: 'bottom',
                 align: 'start',
@@ -2679,11 +2721,12 @@
         scales: {
             y: {
                 suggestedMin: 0,
-                suggestedMax: 50
+                suggestedMax: 30
                 }
             }
         
-        }
+        },
+    plugins: [ChartDataLabels],
     });
 
 
@@ -2701,7 +2744,10 @@
             borderColor: [
                 'rgb(107, 114, 128)',
             ],
-            borderWidth: 2
+            borderWidth: 2,
+            datalabels: {
+                color : 'black',
+            }  
             
         }]
     },
@@ -2718,11 +2764,12 @@
         scales: {
             y: {
                 suggestedMin: 0,
-                suggestedMax: 50
+                suggestedMax: 15
                 }
             }
         
-        }
+        },
+    plugins: [ChartDataLabels],
     });
 
 
@@ -2731,7 +2778,7 @@
 
     var ctx3 = document.getElementById('myChart3').getContext('2d');
     var myChart3 = new Chart(ctx3, {
-    type: 'line',
+    type: 'bar',
     data: {
         labels: ['Initiative', 'Sees & Act on', 'Persistence', 'Information Seeking', 'Concern for High','Commitment to Work','Efficiency Orientation','Systematic Planning','Problem Solving','Self Confidence','Assertiveness','Persuasion','Use of Influence'],
         datasets: [{
@@ -2740,7 +2787,11 @@
             borderColor: [
                 'rgb(107, 114, 128)',
             ],
-            borderWidth: 2            
+            borderWidth: 2,
+            datalabels: {
+                color : 'black',
+                
+            }            
         }]
     },
     options: {
@@ -2756,11 +2807,12 @@
         scales: {
             y: {
                 suggestedMin: 0,
-                suggestedMax: 50
+                suggestedMax: 25
                 }
             }
         
-        }
+        },
+    plugins: [ChartDataLabels],
     });
 
 
@@ -2777,7 +2829,10 @@
             borderColor: [
                 'rgb(107, 114, 128)',
             ],
-            borderWidth: 2
+            borderWidth: 2,
+            datalabels: {
+                color : 'black'
+            }
             
             
             
@@ -2797,11 +2852,13 @@
         scales: {
             y: {
                 suggestedMin: 0,
-                suggestedMax: 50
+                suggestedMax: 60
                 }
             },
                
-        }
+        },
+    plugins: [ChartDataLabels],
+    
     });
 
 

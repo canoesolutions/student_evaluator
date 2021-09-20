@@ -33,12 +33,8 @@ class Emotional_Intelligence(models.Model):
     emotional_intelligence = models.FloatField(null=True, default="")
     emotional_quotient = models.FloatField(null=True, default="")
     eitest_date = models.DateField(blank=True, null=True)
-    # created_by = models.CharField(max_length=20)
-    # created_on = models.DateField(blank=True, null=True)
-    # updated_by = models.CharField(max_length=20)
-    # updated_on = models.DateField(blank=True, null=True)
-
-
+    
+    
 class Intellectual_Capacity(models.Model):
     ic_id = models.AutoField(primary_key=True)
     student_id = models.ForeignKey(Student_Details, default="", on_delete=models.CASCADE)
@@ -49,12 +45,7 @@ class Intellectual_Capacity(models.Model):
     abstract_reasoning = models.IntegerField(null=True, default="")
     intelligence_quotient = models.IntegerField(null=True, default="")
     ictest_date = models.DateField(blank=True, null=True)
-    # created_by = models.CharField(max_length=20)
-    # created_on = models.DateField(blank=True, null=True)
-    # updated_by = models.CharField(max_length=20)
-    # updated_on = models.DateField(blank=True, null=True)
-
-
+    
 class Personal_Test(models.Model):
     pt_id = models.AutoField(primary_key=True)
     student_id = models.ForeignKey(Student_Details, default="", on_delete=models.CASCADE)
@@ -74,10 +65,6 @@ class Personal_Test(models.Model):
     average_competency = models.FloatField(null=True, default="")
     correction_factor = models.IntegerField(null=True, default="")
     pttest_date = models.DateField(blank=True, null=True)
-    # created_by = models.CharField(max_length=20)
-    # created_on = models.DateField(blank=True, null=True)
-    # updated_by = models.CharField(max_length=20)
-    # updated_on = models.DateField(blank=True, null=True)
     
     
 class Meta_Cognitive_Test(models.Model):
@@ -88,8 +75,5 @@ class Meta_Cognitive_Test(models.Model):
     monitoring_skill = models.IntegerField(null=True, default="")
     evalauation_skill = models.IntegerField(null=True, default="")
     mcttest_date = models.DateField(blank=True, null=True)
-    # created_by = models.CharField(max_length=20)
-    # created_on = models.DateField(blank=True, null=True)
-    # updated_by = models.CharField(max_length=20)
-    # updated_on = models.DateField(blank=True, null=True)
+    
     
