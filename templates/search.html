@@ -71,14 +71,43 @@
         </div>
 
         <!--Body-->
-        <p>Email content </p>
         
+          <form class="bg-gray-300 shadow-md rounded px-8 pt-6 pb-8 mb-4" action="sendemail" method="POST">
+            {% csrf_token %}
+            <div class="mb-4">
+              
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                <input type="checkbox"  id="checkemails">   Send To All Students
+              </label> 
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="useremail">
+                Email
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="useremail" id="useremail" type="text">
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="usersubject">
+                Subject
+              </label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="usersubject" id="usersubject" type="text">
+            </div>
+            <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="usermessage">
+                Message
+              </label>
+              <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="usermessage" id="usermessage" rows="4" >
+
+              </textarea>
+            </div>
+            
+          
         <!--Footer-->
         <div class="flex justify-end pt-2">
-          <button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2">Send</button>
-          <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+          <button class="inline-flex items-center mr-4 bg-gray-600 border-0 text-gray-200 py-2 px-5 focus:outline-none hover:bg-gray-700 rounded-full text-base mt-4 md:mt-0" type="submit">Send Email</button>
+          <button class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 rounded-full">Close</button>
         </div>
-        
+      </form>
         </div>
         </div>
         </div>

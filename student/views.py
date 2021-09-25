@@ -1,4 +1,5 @@
 import csv, io
+from student_evaluator.settings import EMAIL_HOST_USER
 from django.shortcuts import redirect, render
 from .models import Emotional_Intelligence, Intellectual_Capacity, Meta_Cognitive_Test, Personal_Test, Student_Details
 from django.contrib import messages
@@ -7,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
+from django.core.mail import send_mail, EmailMessage
 
 # Create your views here.
 def login(request):
@@ -363,3 +365,16 @@ def update(request, pk):
     students = Student_Details.objects.get(student_id=pk)
     students.save()
     return render(request, 'update.html', {'students': students})
+
+
+# This Function will Send Email
+def sendemail(request):
+    useremail = request.POST.get('useremail','')
+    usersubject = request.POST.get('usersubject','')
+    usermessage = request.POST.get('usermessage','')
+    email = EmailMessage(usersubject, usermessage, EMAIL_HOST_USER, [useremail])
+    email.content_subtype = 'html'
+    file = open("static\demo.csv", "r")
+    email.attach("demo.csv", file.read(), 'text/plain')
+    email.send()
+    return redirect('/search')

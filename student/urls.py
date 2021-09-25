@@ -16,5 +16,6 @@ urlpatterns = [
     path('delete/<int:pk>', views.delete, name='delete'),
     path('update/<int:pk>', views.update, name='update'),
     path('search', views.search, name='search'), 
+    path('sendemail', views.sendemail, name='sendemail'),
 
 ]
