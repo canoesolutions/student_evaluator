@@ -363,8 +363,22 @@ def delete(request, pk):
 # This Function will Update the Student Record on Search Page
 def update(request, pk):
     students = Student_Details.objects.get(student_id=pk)
-    students.save()
     return render(request, 'update.html', {'students': students})
+
+def update_profile(request, pk):
+    students = Student_Details.objects.get(student_id=pk)
+    students.first_name = request.POST['first_name']
+    students.middle_name = request.POST['middle_name']
+    students.last_name = request.POST['last_name']
+    students.email_id = request.POST['email_id']
+    students.branch_name = request.POST['branch_name']
+    students.mobile_number = request.POST['mobile_number']
+    students.student_year = request.POST['student_year']
+    students.gender = request.POST['gender']
+    students.college_name = request.POST['college_name']
+    students.hometown = request.POST['hometown']
+    students.save()
+    return redirect("/search")
 
 
 # This Function will Send Email

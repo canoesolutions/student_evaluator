@@ -14,7 +14,7 @@ class Student_Details(models.Model):
     college_name = models.CharField(max_length=50)
     student_year = models.CharField(max_length=20)
     branch_name = models.CharField(max_length=20)    
-    mobile_number = models.CharField(max_length=10, unique=True)
+    mobile_number = models.CharField(max_length=12, unique=True)
     email_id = models.EmailField(max_length=254, unique=True)
     hometown = models.CharField(max_length=20)
     

@@ -17,6 +17,8 @@
     <div class="flex flex-col text-center w-full mb-40">
 
         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+        <form action='/update/update_profile/{{students.student_id}}' method="post">
+        {% csrf_token %}
           <table class="min-w-full divide-y divide-white">
              <tbody class="bg-white ">
 
@@ -31,11 +33,54 @@
                           uppercase
                           tracking-wider
                         ">
-                        Name Of Student
+                        First Name
                   </th>
 
                   <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
-                        <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.first_name}} {{students.middle_name}} {{students.last_name}}" > 
+                        <input type="text" name="first_name" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.first_name}}" > 
+                                                    
+                  </td>
+                  
+                  <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                        Middle Name
+                  </th>
+
+                  <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                        <input type="text" name="middle_name" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.middle_name}}" > 
+                                                    
+                  </td>
+                                                
+                                            </tr>
+
+                                        </tbody>
+
+
+                          <tbody class="bg-white">
+                                            <tr>
+                                                <th scope="col" class="
+                          w-1/4
+                          px-6
+                          py-3
+                          text-sm
+                          font-medium
+                          text-gray-500
+                          uppercase
+                          tracking-wider
+                        ">
+                        Last Name
+                  </th>
+
+                  <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
+                        <input type="text" name="last_name" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.last_name}}" > 
                                                     
                   </td>
 
@@ -52,11 +97,11 @@
                                                     Email ID
                                                 </th>
                                                 <td scope="col" class="w-1/4 text-sm font-medium text-gray-900">
-                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.email_id}}" >
+                                                    <input type="text" name="email_id" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.email_id}}" >
                                                 </td>
-                                            </tr>
-
                                         </tbody>
+
+
 
                                         <tbody class="bg-white">
                                             <tr>
@@ -72,7 +117,7 @@
                                                     Branch/Stream
                                                 </th>
                                                 <td scope="col" class="text-sm font-medium text-gray-900">
-                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.branch_name}}" >
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="branch_name"  value="{{students.branch_name}}" >
                                                 </td>
                                                 <th scope="col" class="
                           px-6
@@ -86,7 +131,7 @@
                                                     Mobile Number
                                                 </th>
                                                 <td scope="col" class="text-sm font-medium text-gray-900">
-                                                   <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value=" {{students.mobile_number}}" >
+                                                   <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="mobile_number" value=" {{students.mobile_number}}" >
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -104,7 +149,7 @@
                                                     Year
                                                 </th>
                                                 <td scope="col" class="text-sm font-medium text-gray-900">
-                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.student_year}}" >
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="student_year" value="{{students.student_year}}" >
                                                 </td>
                                                 <th scope="col" class="
                           px-6
@@ -118,7 +163,7 @@
                                                     Gender
                                                 </th>
                                                 <td scope="col" class="text-sm font-medium text-gray-900">
-                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.gender}}" >
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="gender" value="{{students.gender}}" >
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -137,7 +182,7 @@
                                                     College Name
                                                 </th>
                                                 <td scope="col" class="text-sm font-medium text-gray-900">
-                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.college_name}}" >
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="college_name" value="{{students.college_name}}" >
                                                 </td>
                                                 <th scope="col" class="
                           px-6
@@ -151,7 +196,7 @@
                                                     Hometown
                                                 </th>
                                                 <td scope="col" class="text-sm font-medium text-gray-900">
-                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  value="{{students.hometown}}" >
+                                                    <input type="text" class="shadow appearance-none border rounded-full w-full py-2 px-3 text-center text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="hometown" value="{{students.hometown}}" >
                                                 </td>
                                             </tr>
 
@@ -176,7 +221,7 @@
                                         </tbody>
 
           </table>
-          
+          </form>
     </div>
     
   </div>

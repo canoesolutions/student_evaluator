@@ -15,6 +15,7 @@ urlpatterns = [
     path('report/<int:pk>', views.report, name='report'),
     path('delete/<int:pk>', views.delete, name='delete'),
     path('update/<int:pk>', views.update, name='update'),
+    path('update/update_profile/<int:pk>', views.update_profile, name='update_profile'),
     path('search', views.search, name='search'), 
     path('sendemail', views.sendemail, name='sendemail'),
 
