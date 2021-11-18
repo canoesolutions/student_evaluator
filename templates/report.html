@@ -546,10 +546,9 @@
                           tracking-wider
                         ">
                                                     <img src="../static/images/signature.png">
-                                                    <b>ANIL TIJARE</b><br>
-                                                    Dean Training & Placement<br>
-                                                    Shri Sai Shikshan Sanstha's<br>
-                                                    NIT Group of Institutions
+                                                    <b>ANJALI TIJARE</b><br>
+                                                    Pt. Bachharaj Vyas Junior College<br>
+                                                    Nagpur<br>
                                                 </td>
 
 
@@ -2764,7 +2763,7 @@
         scales: {
             y: {
                 suggestedMin: 0,
-                suggestedMax: 15
+                suggestedMax: 12
                 }
             }
         
@@ -2875,7 +2874,7 @@
                     margin:       10,
                     filename:     '{{students.first_name}}_{{students.last_name}}_ei_report.pdf',
                     image:        { type: 'jpeg', quality: 0.99 },
-                    html2canvas:  { width:980 },
+                    html2canvas:  { width:1200 },
                     jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
                 };
             html2pdf().from(eipdf).set(opt1).save();
@@ -2891,7 +2890,7 @@
                     margin:       10,
                     filename:     '{{students.first_name}}_{{students.last_name}}_ic_report.pdf',
                     image:        { type: 'jpeg', quality: 0.99 },
-                    html2canvas:  { width:1000 },
+                    html2canvas:  { width:1200 },
                     jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
                 };
             html2pdf().from(icpdf).set(opt2).save();
@@ -2907,7 +2906,7 @@
                     margin:       10,
                     filename:     '{{students.first_name}}_{{students.last_name}}_pt_report.pdf',
                     image:        { type: 'jpeg', quality: 0.99 },
-                    html2canvas:  { width:980 },
+                    html2canvas:  { width:1200 },
                     jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
                 };
             html2pdf().from(ptpdf).set(opt3).save();
@@ -2923,7 +2922,7 @@
                     margin:       10,
                     filename:     '{{students.first_name}}_{{students.last_name}}_mct_report.pdf',
                     image:        { type: 'jpeg', quality: 0.99 },
-                    html2canvas:  { width:980 },
+                    html2canvas:  { width:1200 },
                     jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
                 };
             html2pdf().from(mctpdf).set(opt4).save();
